@@ -6,11 +6,7 @@ export default class ChromeBoisDomain extends Component {
   
   handleMouseMove = (event) => {
     drawChromeBoiAtCoords(event.clientX, event.clientY)
-    event.clientX
-    event.clientY
-
-    toggleCycling()
-    // resize("+", "-")
+    
     
     
     
@@ -22,11 +18,13 @@ export default class ChromeBoisDomain extends Component {
   }
 
   handleKeyPress = (event) => {
-
-    resize("+")
-    if (event === "a") {
+    // console.log("I am here", event.key)
+    // console.log(event)
+    if (event.key === "a") {
     return resize("+") 
-      } if (event === "s") {
+      } 
+      
+    if (event.key === "s") {
     return resize("-")
     }
     
@@ -53,8 +51,9 @@ export default class ChromeBoisDomain extends Component {
   render() {
     return (
       <canvas 
-        onClick={this.handleKeyPress}
+        onClick={() => toggleCycling()}
         onMouseMove={this.handleMouseMove}
+        onKeyDown={this.handleKeyPress}
         width='900'
         height='600'
         tabIndex="0">
