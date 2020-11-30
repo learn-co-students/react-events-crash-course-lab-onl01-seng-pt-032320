@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// eslint-disable-next-line
 import { drawChromeBoiAtCoords, toggleCycling, resize } from './canvasHelpers.js'
 
 
@@ -11,7 +12,6 @@ export default class ChromeBoisDomain extends Component {
      * (`drawChromeBoiAtCoords` expects two arguments, an x and a y coordinate)
      */
     drawChromeBoiAtCoords(event.clientX, event.clientY)
-    
   }
   
     key = (event) => {
