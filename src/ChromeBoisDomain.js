@@ -7,8 +7,8 @@ export default class ChromeBoisDomain extends Component {
   handleMouseMove = (event) => { 
   //   console.log(event.clientX)
   //  console.log(event.clientY)
-   const x = event.clientX
-   const y = event.clientY
+   const x = event.clientX;
+   const y = event.clientY;
   drawChromeBoiAtCoords(x, y);
 }
     /* TODO: This method should capture the `x` and `y` coordinates of the mouse
@@ -55,13 +55,13 @@ export default class ChromeBoisDomain extends Component {
 
   render() {
     return (
-      <canvas 
+      <canvas
         onMouseMove={this.handleMouseMove}
         width='900'
         height='600'
-        tabIndex="0">
+        tabIndex="0"
         onClick={this.handleClick}
-        onKeyPress={this.handleKey}
+        onKeyPress={this.handleKey}>
       </canvas>
     )
   }
